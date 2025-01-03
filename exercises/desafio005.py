@@ -16,5 +16,5 @@ antecessor = num - 1
 print(f'\n{"-" * 40}'
       f'\nNúmero entrado: {num}'
       f'\n{"-" * 40}'
-      f'\nSeu sucessor: {sucessor}'
-      f'\nSeu antecessor: {antecessor}')
+      f'\nSeu antecessor: {antecessor}'
+      f'\nSeu sucessor: {sucessor}')
