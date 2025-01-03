@@ -4,9 +4,10 @@ Escreva um programa que leia o salário de um funcionário e mostre seu novo sal
 
 # Entrada.
 salario_bruto = float(input('Entre o valor do salário em R$: '))
+valor_reajuste = float(input('Quantos % de reajuste?: '))
 
 # Calcula o valor do reajuste salarial.
-valor_reajuste = 0.15
+valor_reajuste = valor_reajuste / 100
 salario_com_aumento = salario_bruto + (salario_bruto * valor_reajuste)
 
 # Output em 01/01/2025.
