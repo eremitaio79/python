@@ -10,7 +10,7 @@ reajuste2 = float(0.15)
 
 if salario > valor_base:
     salario_reajustado = salario + (salario * reajuste1)
-    print(f'Seu salário de R$ {salario} foi reajustado em 10%, ficando em R$ {salario_reajustado}.')
+    print(f'Seu salário de R$ {salario} foi reajustado em 10%, ficando em R$ {salario_reajustado:.2f}.')
 else:
     salario_reajustado = salario + (salario * reajuste2)
-    print(f'Seu salário de R$ {salario} foi reajustado em 15%, ficando em R$ {salario_reajustado}.')
+    print(f'Seu salário de R$ {salario} foi reajustado em 15%, ficando em R$ {salario_reajustado:.2f}.')
