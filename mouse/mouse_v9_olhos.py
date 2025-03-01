@@ -70,26 +70,23 @@ while cap.isOpened():
                     if current_time - last_click_time > 0.5:  # Evita múltiplos cliques
                         pyautogui.click()
                         last_click_time = current_time
-                eye_closed_frames = 0  # Reseta o contador
+                eye_closed_frames = 0  # Aqui reseto o contador
 
-            # Captura o movimento do nariz (referência para olhar para os lados)
             nose_x = nose.x * w
 
-            # Se o nariz estiver muito à esquerda, faz duplo clique
             if nose_x < w * 0.4:
                 current_time = time.time()
-                if current_time - last_double_click_time > 1:  # Evita cliques seguidos
+                if current_time - last_double_click_time > 1:
                     pyautogui.doubleClick()
                     last_double_click_time = current_time
 
-            # Se o nariz estiver muito à direita, faz clique direito
             elif nose_x > w * 0.6:
                 current_time = time.time()
-                if current_time - last_right_click_time > 1:  # Evita cliques seguidos
+                if current_time - last_right_click_time > 1:
                     pyautogui.rightClick()
                     last_right_click_time = current_time
 
-    # Exibe a imagem
+
     cv2.imshow("Controle de Mouse com os Olhos", frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
